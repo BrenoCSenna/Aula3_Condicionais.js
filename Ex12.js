@@ -11,5 +11,5 @@ for (var i = 1; i < NomeDoDiaDaSemana.length; i++) {
     }
 }
 if (!verifica) {
-    console.log("Inválido");
+    console.log("O dia da semana informado não é válido.");
 }
