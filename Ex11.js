@@ -1,6 +1,6 @@
 const rendaMensalEmCentavos = 3_000_00;
 var mesesDecorridos = 12;
-var totalJaPagoPeloAluno = 1000000;
+var totalJaPagoPeloAluno = 10_000_00;
 var faltaPagar = 18_000_00;
 
 faltaPagar -= totalJaPagoPeloAluno;
