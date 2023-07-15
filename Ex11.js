@@ -1,18 +1,21 @@
-const rendaMensalEmCentavos = 150000;
+const rendaMensalEmCentavos = 3_000_00;
 var mesesDecorridos = 12;
 var totalJaPagoPeloAluno = 1000000;
-var faltaPagar = 1800000000;
+var faltaPagar = 18_000_00;
 
 faltaPagar -= totalJaPagoPeloAluno;
 
 if (rendaMensalEmCentavos > 200000) {
     var descontoDoSalario = rendaMensalEmCentavos * 0.18;
-    while ((faltaPagar > 0) || (mesesDecorridos < 61)) {
+    while ((faltaPagar >= 0) && (mesesDecorridos < 61)) {
+
         if (faltaPagar <= descontoDoSalario) {
             faltaPagar -= descontoDoSalario;
             faltaPagar *= -1;
             console.log("O valor da parcela desse mês é R$ " + faltaPagar / 100);
-            console.log("Essa será a sua ")
+            console.log("Essa será a sua última parcela");
+            break;
+
         }
         totalJaPagoPeloAluno += descontoDoSalario;
         faltaPagar -= descontoDoSalario;
@@ -23,3 +26,4 @@ if (rendaMensalEmCentavos > 200000) {
 else {
     console.log("O valor da parcela desse mês é R$ 0 reais. Nenhum valor é devido pois a renda do estudante está abaixo do valor mínimo de R$ 2000 reais.");
 }
+console.log(mesesDecorridos);
